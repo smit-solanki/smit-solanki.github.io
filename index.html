@@ -17,8 +17,6 @@
         }
 
         * { box-sizing: border-box; transition: all 0.3s ease; }
-        
-        /* Fix for the heading overlap */
         section { scroll-margin-top: var(--nav-height); }
 
         body { 
@@ -29,7 +27,6 @@
             scroll-behavior: smooth; 
         }
         
-        /* Navigation */
         nav { 
             background: rgba(17, 27, 33, 0.95); 
             padding: 0 1rem; 
@@ -44,36 +41,30 @@
             align-items: center;
             backdrop-filter: blur(10px);
         }
-        nav a { text-decoration: none; color: var(--text-dim); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav a { text-decoration: none; color: var(--text-dim); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
         nav a:hover { color: var(--accent); }
 
-        /* Header */
         header { 
             background: linear-gradient(180deg, #128c7e 0%, var(--dark-bg) 100%); 
             padding: 6rem 1rem 3rem; 
             text-align: center; 
         }
         .profile-img { 
-            width: 150px; height: 150px; border-radius: 50%; 
+            width: 140px; height: 140px; border-radius: 50%; 
             border: 4px solid var(--accent); margin-bottom: 20px; 
-            object-fit: cover; box-shadow: 0 0 30px rgba(37, 211, 102, 0.2); 
+            object-fit: cover; 
         }
         
-        /* Buttons */
-        .btn-container { margin-top: 2rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 10px; color: white; border: 1px solid rgba(255,255,255,0.1); }
-        .btn-github { background: #24292e; }
+        .btn-container { margin-top: 2rem; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn { padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 8px; color: white; font-size: 0.9rem; }
+        .btn-github { background: #24292e; border: 1px solid #3b4a54; }
         .btn-linkedin { background: #0077b5; }
-        .btn-resume { background: var(--primary); border: none; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); border-color: var(--accent); }
+        .btn-resume { background: var(--primary); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
 
         .container { max-width: 900px; margin: auto; padding: 2rem 1.5rem; }
-        
-        .section-title { 
-            text-align: center; margin: 4rem 0 2rem; font-size: 2rem; color: var(--accent);
-        }
+        .section-title { text-align: center; margin: 4rem 0 2rem; font-size: 1.8rem; color: var(--accent); }
 
-        /* Modern Dark Cards */
         .card { 
             background: var(--card-bg); 
             padding: 2rem; 
@@ -81,41 +72,39 @@
             margin-bottom: 1.5rem; 
             border: 1px solid #202c33;
             position: relative;
-            overflow: hidden;
-        }
-        .card::before {
-            content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary);
         }
         .card h3 { margin: 0 0 10px 0; color: white; }
-        .sub-text { color: var(--accent); font-weight: 700; font-size: 0.85rem; margin-bottom: 12px; display: block; opacity: 0.8; }
-        p { color: var(--text-dim); line-height: 1.8; }
+        .sub-text { color: var(--accent); font-weight: 700; font-size: 0.85rem; margin-bottom: 12px; display: block; }
         
-        /* Chips */
-        .skills-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        /* Project Specific Styles */
+        .project-list { padding-left: 20px; margin: 15px 0; color: var(--text-dim); }
+        .project-list li { margin-bottom: 8px; }
+        .project-tech { margin-top: 15px; font-size: 0.8rem; color: var(--accent); font-family: monospace; }
+
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
         .skill-chip { 
             background: #202c33; color: var(--text-main); 
-            padding: 10px 22px; border-radius: 50px; 
-            font-weight: 600; font-size: 0.85rem; 
+            padding: 8px 18px; border-radius: 50px; 
+            font-weight: 600; font-size: 0.8rem; 
             border: 1px solid #3b4a54; 
         }
-        .skill-chip:hover { border-color: var(--accent); background: #2a3942; }
 
-        footer { text-align: center; padding: 5rem 1rem; border-top: 1px solid #202c33; margin-top: 4rem; color: var(--text-dim); }
+        footer { text-align: center; padding: 4rem 1rem; border-top: 1px solid #202c33; margin-top: 4rem; color: var(--text-dim); font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
 </nav>
 
 <header>
     <img src="https://ui-avatars.com/api/?name=Smit+Solanki&background=128c7e&color=fff&size=150" alt="Smit Solanki" class="profile-img">
-    <h1 style="margin:0; font-size: 2.8rem;">Smit Solanki</h1>
-    <p style="font-size: 1.2rem; color: var(--accent); font-weight: 500;">| Android Developer |</p>
+    <h1 style="margin:0; font-size: 2.5rem;">Smit Solanki</h1>
+    <p style="font-size: 1.1rem; color: var(--accent);">Android Developer | Java & XML Specialist</p>
     
     <div class="btn-container">
         <a href="https://github.com/smit-solanki" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
@@ -128,24 +117,42 @@
     
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <div class="card" style="text-align: center;">
-            <p>I am a Computer Engineering student from Rajkot with a deep passion for Android Ecosystem. Specializing in <b>Native Java</b> and <b>Custom XML layouts</b>, I bridge the gap between complex backend logic and beautiful, fluid user interfaces. Currently pursuing my B.E. at V.V.P., I am building the next generation of mobile experiences.</p>
+        <div class="card" style="text-align: center; border-top: 3px solid var(--primary);">
+            <p>I am a Computer Engineering student from Rajkot with a deep passion for the Android Ecosystem. Specializing in <b>Native Java</b> and <b>Custom XML layouts</b>, I bridge the gap between complex logic and fluid user interfaces.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="card">
+            <span class="sub-text">Mobile Application</span>
+            <h3>Habit Tracker Android App</h3>
+            <ul class="project-list">
+                <li>Add and track daily habits with real-time completion status.</li>
+                <li>View habit list and monitor consistency/progress.</li>
+                <li>Full CRUD functionality: Edit or delete habits as needed.</li>
+                <li>Clean and user-friendly interface using Material Design.</li>
+            </ul>
+            <p class="project-tech">Tech Stack: Java, XML, SQLite, Android SDK</p>
+            <a href="https://github.com/smit-solanki/Habit-Tracker" target="_blank" class="btn btn-github" style="display:inline-flex; margin-top:10px;">
+                <i class="fab fa-github"></i> View Repository
+            </a>
         </div>
     </section>
 
     <section id="experience">
-        <h2 class="section-title">Professional Experience</h2>
+        <h2 class="section-title">Experience</h2>
         <div class="card">
             <span class="sub-text">Dec 2025 - Present</span>
             <h3>Android Developer</h3>
             <p><b>Silverlines, Rajkot</b></p>
-            <p>Crafting high-performance Java applications with complex UI components and ensuring seamless API integrations.</p>
+            <p>Building scalable Android solutions and optimizing UI performance for native Java applications.</p>
         </div>
         <div class="card">
             <span class="sub-text">July 2023 - Sep 2023</span>
             <h3>Android Intern</h3>
             <p><b>Techbeats Solution, Rajkot</b></p>
-            <p>Mastered XML ViewGroups, Material Design 3 implementation, and Android Activity lifecycles.</p>
+            <p>Developed UI components using XML and implemented core app logic in Java.</p>
         </div>
     </section>
 
@@ -164,24 +171,24 @@
     </section>
 
     <section id="skills">
-        <h2 class="section-title">Technical Arsenal</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
             <span class="skill-chip">Java</span>
             <span class="skill-chip">XML Layouts</span>
             <span class="skill-chip">Android Studio</span>
             <span class="skill-chip">Firebase</span>
-            <span class="skill-chip">Material Design 3</span>
             <span class="skill-chip">SQLite / Room</span>
+            <span class="skill-chip">Material Design</span>
             <span class="skill-chip">REST APIs</span>
-            <span class="skill-chip">Git & GitHub</span>
+            <span class="skill-chip">Git</span>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; Smit Solanki. Rajkot, India.</p>
-    <p>Contact: <a href="mailto:solanki270306@gmail.com" style="color: var(--accent);">your-email@gmail.com</a></p>
+    <p>&copy; 2026 Smit Solanki. Rajkot, India.</p>
+    <p>Email: <a href="mailto:your-email@gmail.com" style="color: var(--accent);">your-email@gmail.com</a></p>
 </footer>
 
 </body>
