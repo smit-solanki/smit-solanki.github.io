@@ -3,93 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smit Solanki | Android Developer</title>
+    <title>Smit Solanki | Android Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #2c3e50; --secondary: #e67e22; --accent: #3498db; --light: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; margin: 0; background: var(--light); }
-        header { background: var(--primary); color: white; padding: 3rem 1rem; text-align: center; }
-        .container { max-width: 850px; margin: auto; padding: 2rem; }
+        :root { --primary: #075e54; --secondary: #128c7e; --accent: #25d366; --dark: #0b141a; --light: #f0f2f5; }
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--light); color: var(--dark); margin: 0; scroll-behavior: smooth; }
+        
+        /* Navbar */
+        nav { background: white; padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; gap: 20px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--secondary); }
+
+        /* Header */
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 5rem 1rem; text-align: center; }
+        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid white; margin-bottom: 20px; object-fit: cover; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         
         /* Buttons */
-        .btn-container { margin-top: 1.5rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; color: white; }
-        .btn-github { background: #333; }
+        .btn-container { margin-top: 2rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 10px; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .btn-github { background: #24292e; }
         .btn-linkedin { background: #0077b5; }
-        .btn-resume { background: var(--secondary); }
-        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+        .btn-resume { background: #ff5722; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
 
-        .card { background: white; padding: 2rem; margin: 1.5rem 0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h2 { color: var(--primary); border-bottom: 3px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 1.5rem; }
+        .container { max-width: 900px; margin: auto; padding: 3rem 1.5rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; position: relative; }
+        .section-title::after { content: ''; width: 50px; height: 4px; background: var(--secondary); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        /* Experience & Education Cards */
+        .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 2rem; border-left: 5px solid var(--secondary); }
+        .card h3 { margin-top: 0; color: var(--primary); }
+        .sub-text { color: var(--secondary); font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; display: block; }
         
-        /* Experience & Education Styling */
-        .item { margin-bottom: 1.5rem; padding-left: 15px; border-left: 3px solid var(--accent); }
-        .item h3 { margin: 0; color: var(--primary); font-size: 1.2rem; }
-        .company { color: var(--secondary); font-weight: bold; margin-bottom: 5px; display: block; }
-        .date { font-size: 0.9rem; color: #7f8c8d; font-style: italic; }
-        
-        .badge { background: #d5dbdb; color: var(--primary); padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; margin: 4px; display: inline-block; font-weight: 600; }
+        /* Skill Chips */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .skill-chip { background: #e8f5e9; color: var(--primary); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; border: 1px solid #c8e6c9; }
+
+        footer { text-align: center; padding: 3rem; background: var(--dark); color: white; margin-top: 4rem; }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+</nav>
+
 <header>
+    <img src="https://ui-avatars.com/api/?name=Smit+Solanki&background=white&color=075e54&size=150" alt="Smit Solanki" class="profile-img">
     <h1>Smit Solanki</h1>
-    <p>Android Developer | Java & XML Layout Specialist</p>
+    <p style="font-size: 1.2rem; opacity: 0.9;">Professional Android Developer | Java & XML Expert</p>
+    
     <div class="btn-container">
         <a href="https://github.com/smit-solanki" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/smit-solanki-22b709338/" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1XKZyXGPahTLosaeRYjse3kXzVVvXZO2k/view?usp=drive_link" target="_blank" class="btn btn-resume"><i class="fas fa-file-pdf"></i> Resume</a>
+        <a href="YOUR_LINKEDIN_URL" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="YOUR_RESUME_LINK" target="_blank" class="btn btn-resume"><i class="fas fa-file-pdf"></i> Resume</a>
     </div>
 </header>
 
 <div class="container">
-    <section class="card">
-        <h2>Professional Experience</h2>
-        
-        <div class="item">
+    
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card" style="border-left: none; text-align: center;">
+            <p>I am a Computer Engineering student and a passionate Android Developer specializing in <b>Native Java</b> and <b>Custom XML layouts</b>. With a strong foundation from my Diploma and currently pursuing my Bachelor's at V.V.P., I focus on building robust, scalable, and user-friendly mobile applications.</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="card">
+            <span class="sub-text">Dec 2025 - Present</span>
             <h3>Android Developer</h3>
-            <span class="company">Silverlines, Rajkot</span>
-            <span class="date">Dec 2025 - Present</span>
-            <p>Developing native Android applications using Java and XML. Focused on UI optimization and implementing modern design patterns.</p>
+            <p><b>Silverlines, Rajkot</b></p>
+            <p>Leading the development of native Android solutions with a focus on high-performance Java code and complex UI/UX implementations using XML.</p>
         </div>
-
-        <div class="item">
-            <h3>Android Development Intern</h3>
-            <span class="company">Techbeats Solution, Rajkot</span>
-            <span class="date">27 July 2023 - 2 Sep 2023</span>
-            <p>Gained hands-on experience in Android Studio, working with XML layouts and core Java logic for mobile apps.</p>
+        <div class="card">
+            <span class="sub-text">July 2023 - Sep 2023</span>
+            <h3>Android Intern</h3>
+            <p><b>Techbeats Solution, Rajkot</b></p>
+            <p>Developed fundamental understanding of the Android Lifecycle, ViewBinding, and Material Design components.</p>
         </div>
     </section>
 
-    <section class="card">
-        <h2>Education</h2>
-        
-        <div class="item">
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <span class="sub-text">2024 - 2027</span>
             <h3>Bachelor of Computer Engineering</h3>
-            <span class="company">V.V.P. Engineering College, Rajkot</span>
-            <span class="date">2024 - 2027</span>
+            <p>V.V.P. Engineering College, Rajkot</p>
         </div>
-
-        <div class="item">
+        <div class="card">
+            <span class="sub-text">2021 - 2024</span>
             <h3>Diploma in Computer Engineering</h3>
-            <span class="company">A.V. Parekh Technical Institute (AVPTI), Rajkot</span>
-            <span class="date">2021 - 2024</span>
+            <p>A.V. Parekh Technical Institute (AVPTI), Rajkot</p>
         </div>
     </section>
 
-    <section class="card">
-        <h2>Technical Skills</h2>
-        <div class="skills">
-            <span class="badge">Java</span>
-            <span class="badge">XML Layouts</span>
-            <span class="badge">Android SDK</span>
-            <span class="badge">Material Design 3</span>
-            <span class="badge">Firebase</span>
-            <span class="badge">REST APIs</span>
+    <section id="skills">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-grid">
+            <span class="skill-chip">Java (Expert)</span>
+            <span class="skill-chip">XML Layouts</span>
+            <span class="skill-chip">Android SDK</span>
+            <span class="skill-chip">Firebase</span>
+            <span class="skill-chip">Material 3</span>
+            <span class="skill-chip">API Integration</span>
+            <span class="skill-chip">Android Studio</span>
+            <span class="skill-chip">Git/GitHub</span>
         </div>
     </section>
+
 </div>
+
+<footer>
+    <p>&copy; 2026 Smit Solanki. Built with Java mindset.</p>
+    <p>Contact: <a href="mailto:your-email@gmail.com" style="color: var(--accent);">your-email@gmail.com</a></p>
+</footer>
 
 </body>
 </html>
