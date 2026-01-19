@@ -27,5 +27,8 @@ A native Android application built with Java and XML.
 * **B.E. in Computer Engineering** - V.V.P. Engineering College (2024 - 2027)
 * **Diploma in Computer Engineering** - A.V. Parekh Technical Institute (2021 - 2024)
 
+  © 2026 Smit Solanki. Licensed under the MIT License.
+
+
 ---
 *Developed with ❤️ by Smit Solanki*
