@@ -18,7 +18,7 @@ A native Android application built with Java and XML.
 * Implemented CRUD operations for habit management.
 * Used SQLite for local data persistence.
 * Designed a clean, user-friendly interface using Material Components.
-
+  
 ## 💼 Experience
 * **Android Developer** at Silverlines, Rajkot (Dec 2025 - Present)
 * **Android Intern** at Techbeats Solution, Rajkot (2023)
